@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../widgets/copy_button.dart';
-
 
 class PiDigitFinder extends StatefulWidget {
   const PiDigitFinder({Key? key}) : super(key: key);
@@ -33,20 +33,25 @@ class _PiDigitFinderState extends State<PiDigitFinder> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Slider(
-          value: piLength,
-          min: 2,
-          max: 1000,
-          divisions: 1000,
-          label: piLength.toInt().toString(),
+        TextFormField(
           onChanged: (value) {
             setState(
               () {
-                piLength = value;
-                _updateStateOfPi(piLength.toInt());
+                if (double.parse(value) <= 1000000) {
+                  piLength = double.parse(value);
+                  _updateStateOfPi(piLength.toInt());
+                } else {
+                  piLength = 2;
+                  _updateStateOfPi(piLength.toInt());
+                }
               },
             );
           },
+          decoration: const InputDecoration(label: Text("Length")),
+          keyboardType: TextInputType.number,
+          inputFormatters: [
+            FilteringTextInputFormatter.digitsOnly,
+          ],
         ),
         Padding(
           padding: const EdgeInsets.all(16.0),

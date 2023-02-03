@@ -32,7 +32,7 @@ final leopardGecko = Pet(
   food:
       "Crickets no bigger than the gecko’s head. Mealworms as treats. 6-7 large crickets 2 to 3 times a week or with supplements like waxworms or Calciworms Feed it 3 to 5 worms 3 times a week",
   hydration: "Small shallow dish of water.",
-  humidity: "30% to 40%",
+  humidity: "30% to 50%",
   temperature: "77 to 90 degrees F.",
   habitat: "This animal needs a basking spot and a hide for cooling down it also needs some open space.",
   other: "A Leopard Gecko’s tail will change colors when it is cold or stressed.",
