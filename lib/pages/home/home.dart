@@ -8,6 +8,8 @@ import 'package:tools/pages/temp_conversion_page.dart';
 import 'package:tools/widgets/settings_dialog.dart';
 import 'package:tools/pets/pages/pet_home.dart';
 
+Color color = Colors.green;
+
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key, required this.title});
 

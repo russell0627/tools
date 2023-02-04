@@ -25,12 +25,7 @@ class _TempConversionPageState extends State<TempConversionPage> {
           },
         ),
       ),
-      body: Column(
-        children: const [
-          TempConversionCalculator(),
-          TempConversionCalculator(),
-        ],
-      ),
+      body: const TempConversionCalculator(),
     );
   }
 }

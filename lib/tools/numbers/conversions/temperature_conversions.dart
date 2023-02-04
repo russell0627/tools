@@ -25,6 +25,8 @@ class TempConversionCalculator extends StatefulWidget {
 }
 
 class _TempConversionCalculatorState extends State<TempConversionCalculator> {
+  final bool fToC = true;
+
   @override
   Widget build(BuildContext context) {
     return Center(
